@@ -1,15 +1,10 @@
 import React from "react";
-import Post from "./Post/Post";
 
-const Posts = () => {
+
+const Post = () => {
   return (
-    // react fragment
-    <>
-      <h1>Posts</h1>
-      <Post />
-      <Post />
-    </>
+      <h1>Post</h1>
   );
 };
 
-export default Posts;
+export default Post;
