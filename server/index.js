@@ -8,13 +8,13 @@ import postRoutes from './routes/posts.js'
 // initialize app
 const app = express();
 
-// set up middleware for /posts routes
-app.use('/posts', postRoutes)
-
 //bodyParser will allow to properly send request
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
+
+// set up middleware for /posts routes
+app.use('/posts', postRoutes)
 
 //
 const CONNECTION_URL =
