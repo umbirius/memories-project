@@ -65,7 +65,7 @@ const Form = () => {
         <div className={classes.fileInput}></div>
         <Button
           className={classes.buttonSubmit}
-          variant="container"
+          variant="contained"
           color="primary"
           size="large"
           type="submit"
