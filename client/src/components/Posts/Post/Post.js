@@ -39,8 +39,10 @@ const Post = ({ post, setCurrentId }) => {
           {post.tags.map((tag) => `#${tag}`)}
         </Typography>
       </div>
+      <Typography className={classes.title} variant="h5">{post.title}</Typography>
+
       <CardContent>
-        <Typography className={classes.title} variant="h5">
+        <Typography variant="h5">
           {post.message}
         </Typography>
       </CardContent>
