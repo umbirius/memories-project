@@ -33,3 +33,18 @@ export const updatePost = (id, post) => async (dispatch) => {
     console.log(error); // error gives more info than error.message
   }
 };
+
+// delete post
+export const deletePost = (id) => async (dispatch) => {
+    try{
+        await api.deletePost(id)
+
+        // no need to const because we do not need any return data, only deleting
+        dispatch({ type: 'DELETE', payload: id})
+    } catch (error){
+        console.log(error)
+
+    }
+
+}
+
