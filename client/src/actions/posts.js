@@ -36,15 +36,22 @@ export const updatePost = (id, post) => async (dispatch) => {
 
 // delete post
 export const deletePost = (id) => async (dispatch) => {
-    try{
-        await api.deletePost(id)
+  try {
+    await api.deletePost(id);
 
-        // no need to const because we do not need any return data, only deleting
-        dispatch({ type: 'DELETE', payload: id})
-    } catch (error){
-        console.log(error)
+    // no need to const because we do not need any return data, only deleting
+    dispatch({ type: "DELETE", payload: id });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-    }
-
-}
-
+// like post
+export const likePost = (id) => async (dispatch) => {
+  try {
+    const { data } = await api.likePost(id);
+    dispatch({ tyoe: "UPDATE", payload: data });
+  } catch (error) {
+    console.log(error);
+  }
+};
